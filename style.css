@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background: #202124;
+}
+
+#game {
+    position: relative;
+    width: 50%;
+    height: 50vh;
+    margin: auto;
+    border-bottom: 1px solid #ACACAC;
+}
+
+#block {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    /* background: #ACACAC; */
+    bottom: 0;
+    right: 0;
+    animation: border 2s linear infinite;
+}
+
+#block img {
+    width: 100%;
+}
+
+#dino {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    /* border-radius: 50%; */
+    bottom: 0;
+    left: 50px;
+    /* background: #ACACAC; */
+}
+
+.jump {
+    animation: jump 400ms alternate infinite;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    /* 35%, 75% {
+        bottom: 120px;
+    }
+    50% {
+        bottom: 130px;
+    } */
+    100% {
+        bottom: 130px;
+    }
+}
+
+@keyframes border {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 100%;
+    }
+}
